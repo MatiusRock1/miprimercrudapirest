@@ -5,7 +5,7 @@ const Schema = moongose.Schema;
 const RegisterShema = new Schema({
     name : String,
     lastname : String,
-    birthdate : Date,
+    birthdate : String,
     address : String,
     status : {
         type : Boolean,

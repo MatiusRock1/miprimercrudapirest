@@ -17,9 +17,11 @@ mongoose.connect('mongodb+srv://MatiusRock:3CASL3u1Kpibt7Yi@cluster0.xglab.mongo
 .then(db => console.log('db conectada'))
 .catch(err => console.log(err));
 
-const indexRouters = require('./routers/index')
-app.use('/',indexRouters);
+const indexRouters = require('./routers/index');
 app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+app.use('/',indexRouters);
+
 
 app.use(morgan('dev'));
 
