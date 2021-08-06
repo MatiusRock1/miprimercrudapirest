@@ -37,6 +37,18 @@ router.post('/register' , async (req,res) => {
        res.json(validation.errors);
      }  
 });
+router.delete ('/register/:id', async (req,res) => {
+      const { id } = req.params;
+      try{
+        await Register.remove({_id : id});
+        res.json({response: 0});
+      }
+      catch (err){
+        console.log(err);
+        res.json({response: 1});
+      }
+      
+});
 
 
 module.exports = router;
