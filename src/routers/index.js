@@ -50,5 +50,24 @@ router.delete ('/register/:id', async (req,res) => {
       
 });
 
+router.patch('/register/:id', async (req,res) => {
+  const { id } = req.params;
+  const validation = (RegisterShema.validate(req.body, schema));
+  if(validation.errors.length == 0 ){
+  try{
+    await Register.updateOne({_id:id}, req.body);
+    res.json({response: 0});
+  }
+  catch(err){
+    console.log(err);
+    res.json({response: 1});
+  }
+}
+else
+{
+  res.json(validation.errors);
+}  
+});
+
 
 module.exports = router;
