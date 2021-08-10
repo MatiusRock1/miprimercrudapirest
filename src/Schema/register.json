@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "register",
+    "type": "object",
+    "name": {
+      "name": {
+        "type": "string"
+      },
+      "lastname": {
+        "type": "string"
+      },
+      "birthdate": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      }
+      
+    },
+    "required": ["name", "lastname","birthdate","address"]
+  }
