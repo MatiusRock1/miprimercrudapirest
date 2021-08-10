@@ -18,6 +18,10 @@ router.get('/register' , async (req,res) => {
     res.json({response: 1});
   }
 });
+router.get('/' , async (req,res) => {
+ res.send("hola");
+
+});
 
 
 router.post('/register' , async (req,res) => {
