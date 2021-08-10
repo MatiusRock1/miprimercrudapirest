@@ -17,6 +17,7 @@ mongoose.connect('mongodb+srv://MatiusRock:3CASL3u1Kpibt7Yi@cluster0.xglab.mongo
 .then(db => console.log('db conectada'))
 .catch(err => console.log(err));
 
+console.log("its a test");
 
 
 const indexRouters = require('./src/routers/index');
