@@ -16,6 +16,8 @@ mongoose.set('useUnifiedTopology' , true);
 mongoose.connect('mongodb+srv://MatiusRock:3CASL3u1Kpibt7Yi@cluster0.xglab.mongodb.net/myFirstDatabaseApiRest?retryWrites=true&w=majority')
 .then(db => console.log('db conectada'))
 .catch(err => console.log(err));
+console.log('test');
+
 
 const indexRouters = require('./src/routers/index');
 app.use(express.urlencoded({extended:false}));
