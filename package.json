@@ -2,9 +2,9 @@
   "name": "miprimerapirest",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.js",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon src/main.js"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
